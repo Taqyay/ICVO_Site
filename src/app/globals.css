@@ -4,36 +4,36 @@
   --font-sans: var(--font-inter);
   --font-heading: var(--font-inter);
 
-  /* Sovereign Minimalism */
-  --color-background: #FFFFFF;
-  /* Pure White */
-  --color-foreground: #111111;
-  /* Matte Black */
+  /* Humanized Intelligence */
+  --color-background: #F0F0F0;
+  /* Cloud Dancer - Soft Neutral */
+  --color-foreground: #3B3B98;
+  /* Deep Indigo - Professional Authority */
 
-  --color-primary: #0047AB;
-  /* Deep Cobalt - Intelligence */
+  --color-primary: #A78BFA;
+  /* Digital Lavender - Warm Intelligence */
   --color-primary-foreground: #FFFFFF;
 
-  --color-secondary: #F3F4F6;
-  /* Cool Light Gray */
-  --color-secondary-foreground: #111111;
+  --color-secondary: #A47864;
+  /* Mocha Mousse - Warmth */
+  --color-secondary-foreground: #FFFFFF;
 
-  --color-muted: #F9FAFB;
-  --color-muted-foreground: #6B7280;
-  /* Cool Grey */
+  --color-muted: #E8E8E8;
+  --color-muted-foreground: #6B728A;
+  /* Muted Indigo-Gray */
 
   --color-card: #FFFFFF;
-  --color-card-foreground: #111111;
+  --color-card-foreground: #3B3B98;
 
-  --color-border: #E5E7EB;
-  --color-input: #E5E7EB;
+  --color-border: #D1D1D6;
+  --color-input: #D1D1D6;
 
   --radius-lg: 0px;
   /* Sharp corners for sovereign feel */
   --radius-md: 0px;
   --radius-sm: 0px;
 
-  --animate-up: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-up: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
   @keyframes slide-up {
     from {

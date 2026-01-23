@@ -1,41 +1,69 @@
+"use client";
+
 import { ICVOFramework } from "@/components/home/ICVOFramework";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, ShieldCheck, Zap, Brain } from "lucide-react";
+import { FrictionAudit } from "@/components/home/FrictionAudit";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Vision Hero */}
-      <section className="min-h-[85vh] flex items-center justify-center bg-white relative overflow-hidden">
+      <section className="min-h-[85vh] flex items-center justify-center bg-background relative overflow-hidden">
         <Container className="text-center max-w-5xl mx-auto z-10">
-          <div className="inline-block px-4 py-1.5 border border-gray-200 rounded-full text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-8">
-            Systemic Evolution Partner
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-8 leading-[1.1]">
-            To redefine the relationship between <br className="hidden md:block" />
-            humanity and <span className="text-primary">innovation</span>.
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
-            Ensuring technology serves as a universal enabler of societal evolution.
-            We remove the friction so you can shape the future.
-          </p>
-          <div className="flex justify-center gap-4">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 h-12">
-              Start Consultation
-            </Button>
-            <Button size="lg" variant="outline" className="rounded-none px-8 h-12 border-gray-200 hover:bg-gray-50">
-              Explore The Framework
-            </Button>
-          </div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="text-5xl md:text-7xl font-heading font-black tracking-tight text-foreground mb-8 leading-[1.1]"
+          >
+            WHY ARE YOUR SMARTEST PEOPLE <br />
+            <span className="text-primary">BABYSITTING YOUR SYSTEMS?</span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12"
+          >
+            You didn't hire brilliant minds to manage administration. We dismantle the digital clutter and architect invisible engines that let your people do the work that actually matters.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col md:flex-row justify-center gap-6"
+          >
+            <Link href="#friction-audit">
+              <Button size="lg" className="w-full md:w-auto bg-primary hover:bg-primary/90 text-primary-foreground rounded-none px-10 h-14 text-lg font-semibold tracking-wide shadow-lg shadow-primary/20">
+                Find the Friction
+              </Button>
+            </Link>
+            <Link href="/philosophy">
+              <Button size="lg" variant="outline" className="w-full md:w-auto rounded-none px-10 h-14 text-lg border-border hover:bg-secondary/30 hover:border-primary/50 text-foreground">
+                Our Philosophy
+              </Button>
+            </Link>
+          </motion.div>
         </Container>
 
         {/* Subtle Grid Background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+
+        {/* Ambient Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
       </section>
 
       {/* The Framework */}
       <ICVOFramework />
+
+      {/* Friction Audit Productized Service */}
+      <FrictionAudit />
 
       {/* Enabler vs Barrier Section */}
       <section className="py-32 bg-secondary/30">
@@ -88,6 +116,7 @@ export default function Home() {
               icon={<Zap className="w-8 h-8 text-primary" />}
               title="Operational Efficiency Audits"
               description="The Friction Removal. Identifying and eliminating the structural drag on your organization."
+              href="#friction-audit"
             />
             <ServiceCard
               icon={<ShieldCheck className="w-8 h-8 text-primary" />}
@@ -102,17 +131,27 @@ export default function Home() {
   );
 }
 
-function ServiceCard({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
-  return (
-    <div className="minimal-card">
+function ServiceCard({ icon, title, description, href }: { icon: React.ReactNode, title: string, description: string, href?: string }) {
+  const content = (
+    <div className="minimal-card h-full flex flex-col cursor-pointer group hover:border-primary/50 transition-colors">
       <div className="mb-6">{icon}</div>
       <h3 className="text-xl font-bold mb-4">{title}</h3>
-      <p className="text-sm text-muted-foreground leading-relaxed">
+      <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
         {description}
       </p>
-      <div className="mt-6 flex items-center text-primary text-sm font-semibold cursor-pointer group">
+      <div className="mt-6 flex items-center text-primary text-sm font-semibold">
         Learn more <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
       </div>
     </div>
-  )
+  );
+
+  if (href) {
+    return (
+      <Link href={href} className="block h-full">
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 }

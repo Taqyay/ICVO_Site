@@ -1,0 +1,1384 @@
+# ICVO Website Context Bundle - Generated 01/22/2026 23:16:21
+
+=== START FILE: src/app/contact/page.tsx ===
+import { Container } from "@/components/ui/container";
+import { ContactForm } from "@/components/contact/ContactForm";
+import { Mail, MapPin, Phone } from "lucide-react";
+
+export default function ContactPage() {
+    return (
+        <div className="min-h-screen py-24">
+            <Container>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div>
+                        <h1 className="text-4xl md:text-6xl font-bold font-heading mb-6 text-foreground">
+                            Request <span className="text-primary">Consultation</span>.
+                        </h1>
+                        <p className="text-lg text-muted-foreground mb-12 max-w-lg leading-relaxed">
+                            For organizations ready to evolve. Engage our strategists to architect your invisible AI foundation.
+                        </p>
+
+                        <div className="space-y-8">
+                            <div className="flex items-start gap-4">
+                                <div className="p-3 bg-muted rounded-lg text-primary">
+                                    <Mail />
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-foreground mb-1">Email Us</h3>
+                                    <p className="text-muted-foreground">hello@icvo.co.uk</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="p-3 bg-muted rounded-lg text-secondary">
+                                    <MapPin />
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-foreground mb-1">Visit Us</h3>
+                                    <p className="text-muted-foreground">
+                                        123 Tech Hub Square<br />
+                                        London, UK
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start gap-4">
+                                <div className="p-3 bg-muted rounded-lg text-foreground">
+                                    <Phone />
+                                </div>
+                                <div>
+                                    <h3 className="font-bold text-foreground mb-1">Call Us</h3>
+                                    <p className="text-muted-foreground">+44 20 1234 5678</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="bg-white p-8 rounded-3xl border border-border shadow-2xl">
+                        <ContactForm />
+                    </div>
+                </div>
+            </Container>
+        </div>
+    );
+}
+
+=== END FILE: src/app/contact/page.tsx ===
+
+=== START FILE: src/app/engine/page.tsx ===
+import { Container } from "@/components/ui/container";
+
+export default function EnginePage() {
+    return (
+        <div className="py-24">
+            <Container>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                    <div>
+                        <h1 className="text-5xl md:text-7xl font-serif text-primary mb-8">The Warmth</h1>
+                        <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                            Contextualizing tech not as a machine, but as a quiet, supportive foundation. Like the floorboards of a home—essential, strong, and largely unnoticed until you need them to hold you up.
+                        </p>
+                        <div className="space-y-6">
+                            <EngineItem title="Architecture as Foundation" description="Solid, reliable, and designed to bear the weight of your ambition." />
+                            <EngineItem title="Code as Poetry" description="Clean, efficient, and expressive. Written for humans, read by machines." />
+                            <EngineItem title="Security as Shelter" description="A protective layer that provides peace of mind without creating walls." />
+                        </div>
+                    </div>
+                    <div className="relative h-[600px] bg-secondary/10 rounded-t-full flex items-center justify-center p-12">
+                        {/* Abstract representation of "Quiet Tech" */}
+                        <div className="w-64 h-64 bg-primary/20 rounded-full blur-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                        <div className="z-10 text-center">
+                            <div className="text-9xl font-serif text-primary opacity-20"> & </div>
+                        </div>
+                    </div>
+                </div>
+            </Container>
+        </div>
+    );
+}
+
+function EngineItem({ title, description }: { title: string, description: string }) {
+    return (
+        <div className="group">
+            <h3 className="text-xl font-serif text-foreground mb-2 group-hover:text-primary transition-colors">{title}</h3>
+            <p className="text-muted-foreground text-sm">{description}</p>
+        </div>
+    )
+}
+
+=== END FILE: src/app/engine/page.tsx ===
+
+=== START FILE: src/app/philosophy/page.tsx ===
+import { Container } from "@/components/ui/container";
+
+export default function PhilosophyPage() {
+    return (
+        <div className="py-24">
+            <Container>
+                <h1 className="text-5xl md:text-7xl font-serif text-primary mb-12">Trust Building</h1>
+                <div className="max-w-3xl space-y-8 text-lg text-muted-foreground leading-loose">
+                    <p>
+                        Technology is personal. It touches lives, shapes days, and defines careers. That’s why we don’t start with architecture diagrams. We start with coffee.
+                    </p>
+                    <p>
+                        Our Human-Centred Design process is built on a radical premise: <strong>The user is the expert of their own experience.</strong>
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                        <div className="border-l-2 border-primary pl-6">
+                            <h3 className="text-2xl font-serif text-foreground mb-4">Listen</h3>
+                            <p className="text-sm">We spend days shadowing your teams, understanding not just what they do, but how it feels to do it.</p>
+                        </div>
+                        <div className="border-l-2 border-primary pl-6">
+                            <h3 className="text-2xl font-serif text-foreground mb-4">Distill</h3>
+                            <p className="text-sm">We strip away the complexity to reveal the core human need hiding behind the technical requirement.</p>
+                        </div>
+                        <div className="border-l-2 border-primary pl-6">
+                            <h3 className="text-2xl font-serif text-foreground mb-4">Empower</h3>
+                            <p className="text-sm">We build tools that amplify human capability rather than replacing it.</p>
+                        </div>
+                    </div>
+                </div>
+            </Container>
+        </div>
+    );
+}
+
+=== END FILE: src/app/philosophy/page.tsx ===
+
+=== START FILE: src/app/stories/page.tsx ===
+import { Container } from "@/components/ui/container";
+
+export default function StoriesPage() {
+    return (
+        <div className="py-24">
+            <Container>
+                <h1 className="text-5xl md:text-7xl font-serif text-primary mb-12">The Difference Made</h1>
+                <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mb-24">
+                    We don’t measure success in code deployed or features shipped. We measure it in moments reclaimed.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+                    <div className="paper-card p-12 rounded-sm relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-bl-full transition-transform group-hover:scale-150 duration-700" />
+                        <blockquote className="text-2xl font-serif italic text-foreground mb-8 relative z-10">
+                            "I used to spend my weekends worrying about data integrity. Now, I spend them with my family."
+                        </blockquote>
+                        <div className="flex items-center gap-4">
+                            <div className="w-12 h-12 bg-secondary/30 rounded-full" />
+                            <div>
+                                <div className="font-bold">Sarah J.</div>
+                                <div className="text-sm text-muted-foreground">CTO, HealthFirst</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="paper-card p-12 rounded-sm relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full transition-transform group-hover:scale-150 duration-700" />
+                        <blockquote className="text-2xl font-serif italic text-foreground mb-8 relative z-10">
+                            "The system just works. It's invisible. That's the highest compliment I can give."
+                        </blockquote>
+                        <div className="flex items-center gap-4">
+                            <div className="w-12 h-12 bg-primary/30 rounded-full" />
+                            <div>
+                                <div className="font-bold">Michael R.</div>
+                                <div className="text-sm text-muted-foreground">Ops Director, LogisticsCo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Container>
+        </div>
+    );
+}
+
+=== END FILE: src/app/stories/page.tsx ===
+
+=== START FILE: src/app/globals.css ===
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-inter);
+
+  /* Humanized Intelligence */
+  --color-background: #F0F0F0;
+  /* Cloud Dancer - Soft Neutral */
+  --color-foreground: #3B3B98;
+  /* Deep Indigo - Professional Authority */
+
+  --color-primary: #A78BFA;
+  /* Digital Lavender - Warm Intelligence */
+  --color-primary-foreground: #FFFFFF;
+
+  --color-secondary: #A47864;
+  /* Mocha Mousse - Warmth */
+  --color-secondary-foreground: #FFFFFF;
+
+  --color-muted: #E8E8E8;
+  --color-muted-foreground: #6B728A;
+  /* Muted Indigo-Gray */
+
+  --color-card: #FFFFFF;
+  --color-card-foreground: #3B3B98;
+
+  --color-border: #D1D1D6;
+  --color-input: #D1D1D6;
+
+  --radius-lg: 0px;
+  /* Sharp corners for sovereign feel */
+  --radius-md: 0px;
+  --radius-sm: 0px;
+
+  --animate-up: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Base styles */
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading tracking-tight text-foreground font-semibold;
+  }
+
+  p {
+    @apply leading-relaxed text-muted-foreground;
+  }
+}
+
+/* Custom Utilities */
+@utility glass {
+  @apply bg-white/80 backdrop-blur-md border-b border-gray-100;
+}
+
+@utility minimal-card {
+  @apply bg-white border border-gray-100 p-8 hover:border-gray-300 transition-colors duration-300;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E5E7EB;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0047AB;
+}
+=== END FILE: src/app/globals.css ===
+
+=== START FILE: src/app/layout.tsx ===
+import type { Metadata } from "next";
+import { Inter } from "next/font/google"; // Back to Inter for sharpness
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import "./globals.css";
+
+// Ultra-sharp Sans
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: 'swap',
+});
+
+export const metadata: Metadata = {
+  title: "ICVO | Technology Enabler",
+  description: "Redefining the relationship between humanity and innovation. Intentional AI Consultancy.",
+  keywords: ["Technology Enabler", "Intentional AI Consultancy", "Social Value Technology", "Strategic AI"],
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body
+        className={`${inter.variable} antialiased bg-background text-foreground flex flex-col min-h-screen font-sans selection:bg-primary/20`}
+      >
+        <Navbar />
+        <main className="flex-grow pt-20">
+          {children}
+        </main>
+        <Footer />
+      </body>
+    </html>
+  );
+}
+
+=== END FILE: src/app/layout.tsx ===
+
+=== START FILE: src/app/page.tsx ===
+import { ICVOFramework } from "@/components/home/ICVOFramework";
+import { Container } from "@/components/ui/container";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, CheckCircle2, ShieldCheck, Zap, Brain } from "lucide-react";
+
+export default function Home() {
+  return (
+    <div className="flex flex-col">
+      {/* Vision Hero */}
+      <section className="min-h-[85vh] flex items-center justify-center bg-white relative overflow-hidden">
+        <Container className="text-center max-w-5xl mx-auto z-10">
+          <div className="inline-block px-4 py-1.5 border border-gray-200 rounded-full text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-8">
+            Systemic Evolution Partner
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-8 leading-[1.1]">
+            To redefine the relationship between <br className="hidden md:block" />
+            humanity and <span className="text-primary">innovation</span>.
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
+            Ensuring technology serves as a universal enabler of societal evolution.
+            We remove the friction so you can shape the future.
+          </p>
+          <div className="flex justify-center gap-4">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-none px-8 h-12">
+              Start Consultation
+            </Button>
+            <Button size="lg" variant="outline" className="rounded-none px-8 h-12 border-gray-200 hover:bg-gray-50">
+              Explore The Framework
+            </Button>
+          </div>
+        </Container>
+
+        {/* Subtle Grid Background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+      </section>
+
+      {/* The Framework */}
+      <ICVOFramework />
+
+      {/* Enabler vs Barrier Section */}
+      <section className="py-32 bg-secondary/30">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <div>
+              <h2 className="text-4xl font-bold mb-6">Dissolving The Barrier</h2>
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                Legacy debt, operational friction, and fragmented data are not just technical problems. They are barriers to human potential. ICVO exists to dismantle these barriers systematically.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
+                  <span className="text-foreground font-medium">From Tech Debt to Tech Asset</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
+                  <span className="text-foreground font-medium">From Operational Drag to Velocity</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
+                  <span className="text-foreground font-medium">From Data Noise to Strategic Clarity</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white p-12 border border-gray-200 shadow-sm relative">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5" />
+              <h3 className="text-2xl font-bold mb-2">The Sovereign Standard</h3>
+              <p className="text-muted-foreground">Minimal friction. Maximum impact. Our architecture is designed to be invisible, allowing your mission to take center stage.</p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Service Pillars */}
+      <section className="py-32">
+        <Container>
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-3xl font-bold mb-4">Architecting Value</h2>
+            <p className="text-muted-foreground">Our three-pillared approach to systemic transformation.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <ServiceCard
+              icon={<Brain className="w-8 h-8 text-primary" />}
+              title="Strategic AI Implementation"
+              description="The Invisible Engine. We deploy intentional AI layers that process complexity autonomously."
+            />
+            <ServiceCard
+              icon={<Zap className="w-8 h-8 text-primary" />}
+              title="Operational Efficiency Audits"
+              description="The Friction Removal. Identifying and eliminating the structural drag on your organization."
+            />
+            <ServiceCard
+              icon={<ShieldCheck className="w-8 h-8 text-primary" />}
+              title="Social Value Architecting"
+              description="The Human Impact. Ensuring every technical decision translates into tangible societal betterment."
+            />
+          </div>
+        </Container>
+      </section>
+
+    </div>
+  );
+}
+
+function ServiceCard({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
+  return (
+    <div className="minimal-card">
+      <div className="mb-6">{icon}</div>
+      <h3 className="text-xl font-bold mb-4">{title}</h3>
+      <p className="text-sm text-muted-foreground leading-relaxed">
+        {description}
+      </p>
+      <div className="mt-6 flex items-center text-primary text-sm font-semibold cursor-pointer group">
+        Learn more <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+      </div>
+    </div>
+  )
+}
+
+=== END FILE: src/app/page.tsx ===
+
+=== START FILE: src/components/contact/ContactForm.tsx ===
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+
+export function ContactForm() {
+    const [status, setStatus] = useState<"idle" | "sending" | "success">("idle");
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        setStatus("sending");
+        // Simulate API call
+        setTimeout(() => setStatus("success"), 2000);
+    };
+
+    if (status === "success") {
+        return (
+            <div className="glass-card p-8 rounded-2xl text-center">
+                <h3 className="text-2xl font-bold mb-4 font-heading text-primary">Message Sent</h3>
+                <p className="text-muted-foreground">Thank you for reaching out. Our team will be in touch shortly typically within 24 hours.</p>
+                <Button variant="outline" className="mt-6" onClick={() => setStatus("idle")}>Send Another</Button>
+            </div>
+        );
+    }
+
+    return (
+        <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                    <label htmlFor="firstName" className="text-sm font-medium text-muted-foreground">First name</label>
+                    <input
+                        id="firstName"
+                        required
+                        className="w-full bg-white border border-input rounded-none px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                        placeholder="John"
+                    />
+                </div>
+                <div className="space-y-2">
+                    <label htmlFor="lastName" className="text-sm font-medium text-muted-foreground">Last name</label>
+                    <input
+                        id="lastName"
+                        required
+                        className="w-full bg-white border border-input rounded-none px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                        placeholder="Doe"
+                    />
+                </div>
+            </div>
+
+            <div className="space-y-2">
+                <label htmlFor="company" className="text-sm font-medium text-muted-foreground">Organization</label>
+                <input
+                    id="company"
+                    type="text"
+                    required
+                    className="w-full bg-white border border-input rounded-none px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                    placeholder="Company Name"
+                />
+            </div>
+
+            <div className="space-y-2">
+                <label htmlFor="email" className="text-sm font-medium text-muted-foreground">Work Email</label>
+                <input
+                    id="email"
+                    type="email"
+                    required
+                    className="w-full bg-white border border-input rounded-none px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                    placeholder="john@company.com"
+                />
+            </div>
+
+            <div className="space-y-2">
+                <label htmlFor="message" className="text-sm font-medium text-muted-foreground">Strategic Objective</label>
+                <textarea
+                    id="message"
+                    required
+                    rows={5}
+                    className="w-full bg-white border border-input rounded-none px-4 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
+                    placeholder="Briefly describe your current technical barrier..."
+                />
+            </div>
+
+            <Button type="submit" size="lg" className="w-full" disabled={status === "sending"}>
+                {status === "sending" ? "Sending..." : "Send Message"}
+            </Button>
+        </form>
+    );
+}
+
+=== END FILE: src/components/contact/ContactForm.tsx ===
+
+=== START FILE: src/components/home/FrameworkAnimation.tsx ===
+"use client";
+
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+
+export function FrameworkAnimation() {
+    return (
+        <div className="relative w-full h-[600px] flex items-center justify-center perspective-[1000px]">
+            {/* Background Glow */}
+            <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full opacity-30 animate-pulse" />
+
+            <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] flex items-center justify-center preserve-3d rotate-x-12">
+                {/* Strategic Layer (Top) */}
+                <Layer
+                    label="Strategic"
+                    color="bg-primary"
+                    delay={0}
+                    className="translate-y-[-100px] scale-90 z-30"
+                    description="Vision & Direction"
+                />
+
+                {/* Tactical Layer (Middle) */}
+                <Layer
+                    label="Tactical"
+                    color="bg-secondary"
+                    delay={0.2}
+                    className="z-20"
+                    description="Planning & Orchestration"
+                />
+
+                {/* Operational Layer (Bottom) */}
+                <Layer
+                    label="Operational"
+                    color="bg-white"
+                    delay={0.4}
+                    className="translate-y-[100px] scale-90 z-10"
+                    description="Execution & Delivery"
+                />
+
+                {/* Connecting Beams */}
+                <Beam delay={1} className="h-[100px] top-[50%] -translate-y-[100px]" />
+                <Beam delay={1.5} className="h-[100px] top-[50%]" />
+            </div>
+        </div>
+    );
+}
+
+function Layer({
+    label,
+    color,
+    delay,
+    className,
+    description
+}: {
+    label: string;
+    color: string;
+    delay: number;
+    className?: string;
+    description: string;
+}) {
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 0, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{
+                duration: 1,
+                delay,
+                type: "spring",
+                stiffness: 50
+            }}
+            className={cn(
+                "absolute w-64 h-64 md:w-80 md:h-80 rounded-2xl glass-card flex flex-col items-center justify-center border-t border-l border-white/40 shadow-2xl backdrop-blur-xl transition-transform hover:scale-105 hover:bg-white/40 cursor-default group",
+                className
+            )}
+        >
+            <div className={cn("w-12 h-12 rounded-full mb-4 opacity-80 group-hover:opacity-100 transition-opacity blur-md absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2", color)} />
+            <div className={cn("w-4 h-4 rounded-full mb-4 relative z-10", color)} />
+
+            <h3 className="text-xl font-bold font-heading relative z-10 group-hover:text-primary transition-colors">
+                {label}
+            </h3>
+            <p className="text-xs text-muted-foreground mt-2 relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {description}
+            </p>
+        </motion.div>
+    );
+}
+
+function Beam({ delay, className }: { delay: number; className?: string }) {
+    return (
+        <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 100, opacity: 1 }}
+            transition={{ delay, duration: 1 }}
+            className={cn(
+                "absolute w-[2px] bg-gradient-to-b from-transparent via-primary to-transparent left-1/2 -translate-x-1/2 z-0",
+                className
+            )}
+        />
+    )
+}
+
+=== END FILE: src/components/home/FrameworkAnimation.tsx ===
+
+=== START FILE: src/components/home/ICVOFramework.tsx ===
+"use client";
+
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import { ArrowRight, Database, Brain, Sparkles } from "lucide-react";
+
+export function ICVOFramework() {
+    const [activeStage, setActiveStage] = useState<"input" | "value" | "output">("value");
+
+    const stages = {
+        input: {
+            icon: Database,
+            label: "Input",
+            title: "Complexity Absorption",
+            description: "We ingest fragmented data, legacy systems, and operational noise. Not just observing it, but structurally absorbing it.",
+            color: "text-gray-400"
+        },
+        value: {
+            icon: Brain,
+            label: "Create Value",
+            title: "The Invisible Engine",
+            description: "Intentional AI architecture that processes complexity. It solves problems before they reach the human layer.",
+            color: "text-primary"
+        },
+        output: {
+            icon: Sparkles,
+            label: "Output",
+            title: "Societal Evolution",
+            description: "Frictionless human engagement. Technology that serves as a universal enabler for growth and betterment.",
+            color: "text-foreground"
+        }
+    };
+
+    return (
+        <section className="py-32 border-y border-gray-100" id="framework">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                <div className="mb-20">
+                    <h2 className="text-3xl font-bold tracking-tight mb-4">The Logic of Evolution</h2>
+                    <p className="max-w-xl text-muted-foreground">The ICVO framework transforms raw chaotic input into refined human value.</p>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                    {/* Interactive Diagram */}
+                    <div className="lg:col-span-7 flex items-center justify-between relative px-4">
+                        {/* Connecting Line */}
+                        <div className="absolute top-1/2 left-0 right-0 h-px bg-gray-200 -z-10" />
+
+                        {(Object.keys(stages) as Array<"input" | "value" | "output">).map((key) => {
+                            const Icon = stages[key].icon;
+                            const isActive = activeStage === key;
+                            return (
+                                <motion.button
+                                    key={key}
+                                    onClick={() => setActiveStage(key)}
+                                    className={cn(
+                                        "w-24 h-24 rounded-full border-2 flex flex-col items-center justify-center bg-white transition-all duration-300 relative z-10",
+                                        isActive ? "border-primary scale-110 shadow-xl shadow-primary/10" : "border-gray-200 hover:border-gray-300"
+                                    )}
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    <Icon className={cn("w-8 h-8 mb-2 transition-colors", isActive ? "text-primary" : "text-gray-400")} />
+                                    <span className={cn("text-[10px] font-bold uppercase tracking-wider", isActive ? "text-primary" : "text-gray-400")}>
+                                        {stages[key].label}
+                                    </span>
+                                </motion.button>
+                            );
+                        })}
+                    </div>
+
+                    {/* Content Display */}
+                    <div className="lg:col-span-5">
+                        <motion.div
+                            key={activeStage}
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.4 }}
+                        >
+                            <div className="text-sm font-bold text-primary uppercase tracking-widest mb-4">
+                                {stages[activeStage].label} Phase
+                            </div>
+                            <h3 className="text-3xl font-bold mb-6">{stages[activeStage].title}</h3>
+                            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                                {stages[activeStage].description}
+                            </p>
+
+                            <div className="h-1 w-20 bg-primary/20 rounded-full" />
+                        </motion.div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+=== END FILE: src/components/home/ICVOFramework.tsx ===
+
+=== START FILE: src/components/home/ProblemSection.tsx ===
+"use client";
+
+import { Container } from "@/components/ui/container";
+import { MoveRight } from "lucide-react";
+import { motion } from "framer-motion";
+
+export function ProblemSection() {
+    return (
+        <section className="py-24 bg-background relative overflow-hidden">
+            {/* Background decoration */}
+            <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-secondary/5 blur-[120px] rounded-full pointer-events-none" />
+
+            <Container>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6 leading-tight">
+                            The <span className="text-secondary">Velocity Trap</span>.
+                        </h2>
+                        <p className="text-lg text-muted-foreground mb-8">
+                            Modern enterprises are drowning in tools, data, and initiatives.
+                            Efficiency has become noise. Speed has become chaos.
+                        </p>
+                        <div className="space-y-6">
+                            <ProblemItem
+                                title="Fragmented Strategy"
+                                description="Vision disconnects from execution as teams sprint in different directions."
+                            />
+                            <ProblemItem
+                                title="Tech Debt Accumulation"
+                                description="Rapid adoption of new tools creates unmanageable integration layers."
+                            />
+                            <ProblemItem
+                                title="Operational Drag"
+                                description="Complexity slows down the very processes meant to accelerate growth."
+                            />
+                        </div>
+                    </div>
+
+                    <div className="relative h-[500px] w-full bg-muted/30 rounded-2xl border border-border p-8 flex items-center justify-center overflow-hidden">
+                        {/* Abstract visual of chaos/noise */}
+                        <div className="absolute inset-0 opacity-20">
+                            <svg width="100%" height="100%">
+                                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="1" />
+                                </pattern>
+                                <rect width="100%" height="100%" fill="url(#grid)" />
+                            </svg>
+                        </div>
+
+                        {/* "Chaos" Elements */}
+                        <motion.div
+                            animate={{
+                                x: [0, 20, -20, 10, -10, 0],
+                                y: [0, -10, 10, -5, 5, 0],
+                            }}
+                            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                            className="absolute top-1/4 left-1/4 w-32 h-32 bg-red-500/20 blur-xl rounded-full"
+                        />
+                        <motion.div
+                            animate={{
+                                x: [0, -30, 30, -10, 10, 0],
+                                y: [0, 20, -20, 10, -10, 0],
+                            }}
+                            transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                            className="absolute bottom-1/3 right-1/4 w-40 h-40 bg-orange-500/20 blur-xl rounded-full"
+                        />
+
+                        <div className="relative z-10 text-center">
+                            <div className="text-4xl font-bold mb-2">Complexity</div>
+                            <div className="text-sm text-muted-foreground">is the silent killer of growth</div>
+                        </div>
+                    </div>
+                </div>
+            </Container>
+        </section>
+    );
+}
+
+function ProblemItem({ title, description }: { title: string; description: string }) {
+    return (
+        <div className="flex gap-4 items-start group">
+            <div className="mt-1 text-secondary group-hover:translate-x-1 transition-transform">
+                <MoveRight size={20} />
+            </div>
+            <div>
+                <h3 className="font-semibold text-foreground text-lg">{title}</h3>
+                <p className="text-muted-foreground">{description}</p>
+            </div>
+        </div>
+    )
+}
+
+=== END FILE: src/components/home/ProblemSection.tsx ===
+
+=== START FILE: src/components/home/SolutionSection.tsx ===
+import { Container } from "@/components/ui/container";
+import { CheckCircle2 } from "lucide-react";
+
+export function SolutionSection() {
+    return (
+        <section className="py-24 bg-muted/20">
+            <Container>
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                    <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">
+                        The <span className="text-primary">ICVO Framework</span>.
+                    </h2>
+                    <p className="text-lg text-muted-foreground">
+                        We don't just patch holes. We rebuild the foundation through a unified three-tiered approach.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <SolutionCard
+                        layer="Strategic"
+                        title="Unified Vision"
+                        description="Aligning technology with core business objectives to ensure every tool serves a purpose."
+                        features={["Tech Roadmap Alignment", "ROI Analysis", "Future-Proofing"]}
+                        delay={0}
+                    />
+                    <SolutionCard
+                        layer="Tactical"
+                        title="Intelligent Orchestration"
+                        description="Designing seamless workflows that connect disparates systems into a cohesive ecosystem."
+                        features={["API Integration", "Data Flow Optimization", "System Architecture"]}
+                        delay={0.1}
+                    />
+                    <SolutionCard
+                        layer="Operational"
+                        title="Precision Execution"
+                        description="Empowering teams with the right tools and processes to deliver consistent excellence."
+                        features={["Automated Workflows", "Performance Monitoring", "Team Enablement"]}
+                        delay={0.2}
+                    />
+                </div>
+            </Container>
+        </section>
+    );
+}
+
+function SolutionCard({ layer, title, description, features, delay }: { layer: string, title: string, description: string, features: string[], delay: number }) {
+    return (
+        <div className="glass-card p-8 rounded-2xl hover:bg-black/5 transition-colors group">
+            <div className="text-xs font-bold tracking-widest text-primary uppercase mb-4">{layer}</div>
+            <h3 className="text-2xl font-bold font-heading mb-4 group-hover:text-primary transition-colors">{title}</h3>
+            <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
+                {description}
+            </p>
+            <ul className="space-y-3">
+                {features.map((feature) => (
+                    <li key={feature} className="flex items-center gap-3 text-sm text-foreground/80">
+                        <CheckCircle2 size={16} className="text-secondary" />
+                        {feature}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    )
+}
+
+=== END FILE: src/components/home/SolutionSection.tsx ===
+
+=== START FILE: src/components/home/WhyUsSection.tsx ===
+import { Container } from "@/components/ui/container";
+
+const stats = [
+    { label: "Revenue Increase", value: "35%", prefix: "+" },
+    { label: "Systems Integrated", value: "50", prefix: "+" },
+    { label: "Client Satisfaction", value: "100", prefix: "%" },
+];
+
+export function WhyUsSection() {
+    return (
+        <section className="py-24 bg-background border-t border-border" id="about">
+            <Container>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6">
+                            Why <span className="text-primary">ICVO</span>?
+                        </h2>
+                        <p className="text-lg text-muted-foreground mb-6">
+                            We bridge the gap between technical complexity and business reality. Our team is composed of veteran architects who have seen—and solved—it all.
+                        </p>
+                        <div className="grid grid-cols-3 gap-8 mt-12">
+                            {stats.map((stat, index) => (
+                                <div key={index} className="text-center md:text-left">
+                                    <div className="text-4xl md:text-5xl font-bold text-foreground mb-2">
+                                        {stat.prefix === "+" && <span className="text-primary">+</span>}
+                                        {stat.value}
+                                        {stat.prefix === "%" && <span className="text-primary">%</span>}
+                                    </div>
+                                    <div className="text-sm text-muted-foreground uppercase tracking-wider">{stat.label}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 blur-[100px] -z-10 rounded-full" />
+                        <div className="glass-card p-8 rounded-2xl border border-border relative z-10">
+                            <h3 className="text-xl font-bold mb-4 font-heading">Our Philosophy</h3>
+                            <blockquote className="text-lg italic text-muted-foreground border-l-2 border-primary pl-4 my-6">
+                                "Technology should not be a labyrinth. It should be a lever."
+                            </blockquote>
+                            <div className="flex items-center gap-4">
+                                <div className="w-10 h-10 rounded-full bg-black/5" />
+                                <div>
+                                    <div className="font-bold text-foreground">James C.</div>
+                                    <div className="text-xs text-muted-foreground">Principal Architect</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Container>
+        </section>
+    );
+}
+
+=== END FILE: src/components/home/WhyUsSection.tsx ===
+
+=== START FILE: src/components/layout/Footer.tsx ===
+import Link from "next/link";
+import { Container } from "@/components/ui/container";
+
+export function Footer() {
+    return (
+        <footer className="border-t border-border bg-muted/30 py-12 mt-20">
+            <Container>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div className="col-span-1 md:col-span-2">
+                        <Link href="/" className="text-2xl font-bold font-heading tracking-tighter mb-4 block">
+                            <span className="text-primary">ICVO</span>
+                        </Link>
+                        <p className="text-muted-foreground max-w-sm">
+                            Helping organizations navigate complexity through strategic technology implementation.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="font-semibold text-foreground mb-4">Services</h3>
+                        <ul className="space-y-2 text-sm text-muted-foreground">
+                            <li><Link href="#" className="hover:text-primary transition-colors">Digital Strategy</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">System Architecture</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">Operational Efficiency</Link></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 className="font-semibold text-foreground mb-4">Company</h3>
+                        <ul className="space-y-2 text-sm text-muted-foreground">
+                            <li><Link href="#" className="hover:text-primary transition-colors">About Us</Link></li>
+                            <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+                            <li><Link href="#" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="border-t border-border mt-12 pt-8 text-center text-sm text-muted-foreground">
+                    © {new Date().getFullYear()} ICVO Ltd. All rights reserved.
+                </div>
+            </Container>
+        </footer>
+    );
+}
+
+=== END FILE: src/components/layout/Footer.tsx ===
+
+=== START FILE: src/components/layout/Navbar.tsx ===
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Container } from "@/components/ui/container";
+import { Button } from "@/components/ui/button";
+import { LogoText } from "@/components/ui/logo";
+import { cn } from "@/lib/utils";
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+
+const navigation = [
+    { name: "Strategy", href: "#strategy" },
+    { name: "Framework", href: "#framework" },
+    { name: "Consultation", href: "/contact" },
+];
+
+export function Navbar() {
+    const pathname = usePathname();
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    return (
+        <header
+            className={cn(
+                "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+                isScrolled ? "glass py-2" : "bg-transparent py-4"
+            )}
+        >
+            <Container>
+                <nav className="flex items-center justify-between">
+                    <Link href="/" className="hover:opacity-80 transition-opacity">
+                        <LogoText />
+                    </Link>
+
+                    {/* Desktop Nav */}
+                    <div className="hidden md:flex items-center gap-8">
+                        {navigation.map((item) => (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
+                        <Link href="/contact">
+                            <Button variant="glass" size="sm" className="rounded-full">
+                                Contact Us
+                            </Button>
+                        </Link>
+                    </div>
+
+                    {/* Mobile Menu Button */}
+                    <button
+                        className="md:hidden text-muted-foreground hover:text-primary"
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    >
+                        {mobileMenuOpen ? <X /> : <Menu />}
+                    </button>
+                </nav>
+            </Container>
+
+            {/* Mobile Nav */}
+            {mobileMenuOpen && (
+                <div className="md:hidden absolute top-full left-0 right-0 glass border-t border-black/5 p-4 flex flex-col gap-4 animate-accordion-down">
+                    {navigation.map((item) => (
+                        <Link
+                            key={item.name}
+                            href={item.href}
+                            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors p-2"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            {item.name}
+                        </Link>
+                    ))}
+                    <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
+                        <Button className="w-full">Contact Us</Button>
+                    </Link>
+                </div>
+            )}
+        </header>
+    );
+}
+
+=== END FILE: src/components/layout/Navbar.tsx ===
+
+=== START FILE: src/components/ui/button.tsx ===
+import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
+import { cva, type VariantProps } from "class-variance-authority"
+
+import { cn } from "@/lib/utils"
+
+// Note: We need class-variance-authority for this pattern. 
+// I will install it in the next step if I forgot.
+// For now I will write the code assuming it exists or I will just use standard props if I want to avoid extra deps for now.
+// Actually, using cva is standard for shadcn-like setups which are premium.
+// I'll assume I need to install it. I'll add it to the install list or just implement a simpler version for now.
+// Let's implement a simpler version using just clsx/tailwind-merge for now to reduce deps unless requested, 
+// OR I can quickly install class-variance-authority and @radix-ui/react-slot.
+// "Premium" usually implies robust. I should install them.
+// I'll hold off on this file until I install them.
+// Instead, I'll create the Navbar structure first while I plan the install command.
+// Actually, I can just write the simpler button first.
+
+// Let's do a simple flexible Button component without CVA for this iteration to speed up, 
+// unless I really need the variants logic. 
+// I'll stick to a simple one first.
+
+export interface ButtonProps
+    extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+    variant?: "default" | "outline" | "ghost" | "link" | "glass";
+    size?: "default" | "sm" | "lg" | "icon";
+    asChild?: boolean;
+}
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+    ({ className, variant = "default", size = "default", asChild = false, ...props }, ref) => {
+        // Basic variant logic without CVA
+        const variants = {
+            default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25",
+            outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+            ghost: "hover:bg-accent hover:text-accent-foreground",
+            link: "text-primary underline-offset-4 hover:underline",
+            glass: "glass hover:bg-black/5 text-foreground border-black/5",
+        }
+
+        const sizes = {
+            default: "h-10 px-4 py-2",
+            sm: "h-9 rounded-md px-3",
+            lg: "h-11 rounded-md px-8",
+            icon: "h-10 w-10",
+        }
+
+        const Comp = "button"
+
+        return (
+            <Comp
+                className={cn(
+                    "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+                    variants[variant],
+                    sizes[size],
+                    className
+                )}
+                ref={ref}
+                {...props}
+            />
+        )
+    }
+)
+Button.displayName = "Button"
+
+export { Button }
+
+=== END FILE: src/components/ui/button.tsx ===
+
+=== START FILE: src/components/ui/container.tsx ===
+import { cn } from "@/lib/utils"
+
+export function Container({
+    className,
+    children,
+    ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
+    return (
+        <div
+            className={cn(
+                "mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8",
+                className
+            )}
+            {...props}
+        >
+            {children}
+        </div>
+    )
+}
+
+=== END FILE: src/components/ui/container.tsx ===
+
+=== START FILE: src/components/ui/logo.tsx ===
+export function Logo({ className }: { className?: string }) {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100" // Square viewbox for the icon part
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className={className}
+        >
+            {/* Abstract structural shape suggesting complexity to simplicity */}
+            <path d="M20 80 L50 20 L80 80" className="text-primary" />
+            <path d="M50 20 L50 80" className="text-secondary opacity-80" />
+            <path d="M20 50 L80 50" className="text-foreground opacity-20" strokeWidth="4" />
+        </svg>
+    );
+}
+
+export function LogoText({ className }: { className?: string }) {
+    return (
+        <div className={`flex items-center gap-3 ${className}`}>
+            <Logo className="w-8 h-8" />
+            <span className="text-2xl font-bold font-heading tracking-tighter">ICVO</span>
+        </div>
+    )
+}
+
+=== END FILE: src/components/ui/logo.tsx ===
+
+=== START FILE: src/lib/utils.ts ===
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+    return twMerge(clsx(inputs));
+}
+
+=== END FILE: src/lib/utils.ts ===
+
+=== START FILE: next-env.d.ts ===
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
+import "./.next/dev/types/routes.d.ts";
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
+
+=== END FILE: next-env.d.ts ===
+
+=== START FILE: next.config.ts ===
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  /* config options here */
+};
+
+export default nextConfig;
+
+=== END FILE: next.config.ts ===
+
+=== START FILE: package.json ===
+{
+  "name": "icvo-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.2.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.25.0",
+    "lucide-react": "^0.562.0",
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
+
+=== END FILE: package.json ===
+
+=== START FILE: README.md ===
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+=== END FILE: README.md ===
+
+=== START FILE: tsconfig.json ===
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+  ],
+  "exclude": ["node_modules"]
+}
+
+=== END FILE: tsconfig.json ===
